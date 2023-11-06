@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="steve"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-05 08:37:33 pm"/>
+        <attribute name="created" value="c3RldmU7U1RFVkVOTEFQVE9QOzIwMjMtMTEtMDU7MDg6MjU6MzMgcG07MjgyNw=="/>
+        <attribute name="edited" value="c3RldmU7U1RFVkVOTEFQVE9QOzIwMjMtMTEtMDU7MDg6Mzc6MzMgcG07MTsyOTM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="books" type="Real" array="False" size=""/>
+            <declare name="bookcost" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <declare name="shipping" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter in the amount of books being purchased: &quot;" newline="True"/>
+            <input variable="books"/>
+            <output expression="&quot;Please enter in the cost per book: $ &quot;" newline="True"/>
+            <input variable="bookcost"/>
+            <assign variable="total" expression="books * bookcost"/>
+            <if expression="total &lt;= 50">
+                <then>
+                    <assign variable="shipping" expression="25"/>
+                </then>
+                <else>
+                    <assign variable="shipping" expression="0"/>
+                </else>
+            </if>
+            <output expression="&quot;Your order total for the books purchase will be: $ &quot; &amp;total" newline="True"/>
+            <if expression="shipping == 25">
+                <then>
+                    <output expression="&quot;Your shipping cost will be: $ &quot; &amp;shipping" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Also you will be recieving FREE shipping.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

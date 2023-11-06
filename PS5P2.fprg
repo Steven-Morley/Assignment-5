@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="steve"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-05 08:24:39 pm"/>
+        <attribute name="created" value="c3RldmU7U1RFVkVOTEFQVE9QOzIwMjMtMTEtMDU7MDg6MDA6MjMgcG07MjgxOQ=="/>
+        <attribute name="edited" value="c3RldmU7U1RFVkVOTEFQVE9QOzIwMjMtMTEtMDU7MDg6MjQ6MzkgcG07MTsyOTQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="item" type="String" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <declare name="B" type="String" array="False" size=""/>
+            <declare name="quantity" type="Real" array="False" size=""/>
+            <declare name="extendedprice" type="Real" array="False" size=""/>
+            <declare name="unitprice" type="Real" array="False" size=""/>
+            <assign variable="a" expression="&quot;A&quot;"/>
+            <output expression="&quot;Please enter in if you'll will be looking at item A or B: &quot;" newline="True"/>
+            <input variable="item"/>
+            <output expression="&quot;Please enter in the amount of item(s) being purchase: &quot;" newline="True"/>
+            <input variable="quantity"/>
+            <if expression="item == a">
+                <then>
+                    <assign variable="unitprice" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="unitprice" expression="20"/>
+                </else>
+            </if>
+            <assign variable="extendedprice" expression="quantity * unitprice"/>
+            <output expression="&quot;For item: &quot; &amp;item" newline="True"/>
+            <output expression="&quot;It's price per unit will be: $ &quot; &amp;unitprice" newline="True"/>
+            <output expression="&quot;Also it's extanded price will be: $ &quot; &amp;extendedprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
